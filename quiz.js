@@ -38,3 +38,22 @@ let questions = [
       correct: "C"
   }
 ];
+
+// CREATE VARIABLES
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+
+// RENDER A QUESTION
+function renderQuestion() {
+  let q = questions[runningQuestion];
+
+  question.innerHTML = `<p>${q.question}</p>`;
+  qImg.innerHTML = `<img src="${q.imgSrc}">`;
+  choiceA.innerHTML = q.choiceA;
+  choiceB.innerHTML = q.choiceB;
+  choiceC.innerHTML = q.choiceC;
+}
+
+start.style.display = "none";
+renderQuestion();
+quiz.style.display = "block";
